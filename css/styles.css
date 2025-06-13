@@ -1,6 +1,16 @@
 .post-template1 {
+    position: relative;
     background-color: #d7ebfc;
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
+}
+.dev_logo_container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.dev_logo {
+    width: 50px;
+    height: 50px;
 }
