@@ -4,11 +4,12 @@
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
+    width: 48%;
 }
 .dev_logo_container {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 8px;
+    right: 5px;
     display: flex;
     align-items: center;
     padding-right: 15px;
