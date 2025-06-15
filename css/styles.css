@@ -4,7 +4,7 @@
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
-    width: 60%;
+    width: 62%;
 }
 .dev_logo_container {
     position: absolute;
@@ -27,6 +27,16 @@
     bottom: -7px;
     position: relative;
     left: -7px;
+}
+.dev_post_highlight_pt {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 3px;
+    display: inline-flex;
+    line-height: 1.2;
+    font-style: italic;
+    color: #555;
+    background: #ddd;
 }
 .snapshot_main {
     padding: 5px;
