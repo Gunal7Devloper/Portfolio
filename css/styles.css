@@ -41,6 +41,12 @@
     color: #555;
     background: #ddd;
 }
+.dev_post_hashtags {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 3px;
+    margin-block: 10px;
+}
 .snapshot_main {
     padding: 5px;
     border: 1px solid #008080;
