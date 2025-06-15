@@ -36,4 +36,5 @@
     color: #096C6C;
     cursor: pointer;
     font-size: 24px;
+    display: inline-flex;
 }
