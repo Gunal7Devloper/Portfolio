@@ -28,3 +28,12 @@
     position: relative;
     left: -7px;
 }
+.snapshot_main {
+    padding: 5px;
+    border: 1px solid #008080;
+    border-radius: 3px;
+    background: #7fbfbf;
+    color: #096C6C;
+    cursor: pointer;
+    font-size: 24px;
+}
