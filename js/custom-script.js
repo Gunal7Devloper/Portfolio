@@ -11,3 +11,18 @@ function takeSnapshot() {
         link.click();
     });
 }
+function copyToClipboard() {
+    // Copy the content of the div to clipboard
+    const div = document.getElementById("copy-contents");
+    const range = document.createRange();
+    range.selectNode(div);
+    window.getSelection().removeAllRanges(); // Clear previous selections
+    window.getSelection().addRange(range); // Select the content
+    try {
+        document.execCommand("copy"); // Copy to clipboard
+        alert("Content copied to clipboard!");
+    } catch (err) {
+        console.error("Failed to copy: ", err);
+    }
+    window.getSelection().removeAllRanges(); // Clear selection after copying
+}
