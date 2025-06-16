@@ -67,3 +67,6 @@
     margin-inline: 5px;
     font-size: 18px;
 }
+.dev_checklist {
+    list-style: none;
+}
