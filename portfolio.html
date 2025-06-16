@@ -15,15 +15,14 @@
 </head>
 
 <body>
-  <header>
-
-  </header>
   <div class="container">
     <h1>Javascript Post Template</h1>
     <div class="snapshot_main" onclick="takeSnapshot()">
       <i class="fa-solid fa-camera-retro"></i>
     </div>
-    <button type="button" class="btn btn-primary" id="liveToastBtn" onclick="showToast()">Show live toast</button>
+    <div id="liveToastBtn" class="snapshot_main" onclick="showToast()">
+      <i class="fa-solid fa-bell"></i>
+    </div>
 
     <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
       <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
