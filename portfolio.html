@@ -23,15 +23,32 @@
     <div class="snapshot_main" onclick="takeSnapshot()">
       <i class="fa-solid fa-camera-retro"></i>
     </div>
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="..." class="rounded me-2" alt="...">
+          <strong class="me-auto">Bootstrap</strong>
+          <small>11 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Hello, world! This is a toast message.
+        </div>
+      </div>
+    </div>
+
     <div class="d-flex gap-5">
       <div id="capture-template" class="post-template1">
         <h4>Write a function to find the largest gap between two consecutive numbers.</h4>
         <span class="dev_post_inst">
           <strong>Instructions</strong>
-          eturn the largest gap between two consecutive numbers in the array <span class="dev_post_highlight_pt">arr</span> .
+          eturn the largest gap between two consecutive numbers in the array <span
+            class="dev_post_highlight_pt">arr</span> .
           For example, given <span class="dev_post_highlight_pt">[3, 5, 9, 10, 8]</span>,
           the difference between consecutive numbers are 2 <span class="dev_post_highlight_pt">(3 - 5)</span>,
-          4 <span class="dev_post_highlight_pt">(5 - 9)</span> , 
+          4 <span class="dev_post_highlight_pt">(5 - 9)</span> ,
           1 <span class="dev_post_highlight_pt">(9 - 10)</span>
           and 2 <span class="dev_post_highlight_pt">(10 - 8)</span>.
           Here, the largest difference is 4.
@@ -52,8 +69,8 @@
           <h4>LinkedIn</h4>
           <span onclick="copyToClipboard()" class="clipborad-icon">
             <i class="fa-solid fa-clipboard"></i>
-          </span>          
-        </div>        
+          </span>
+        </div>
         <div id="copy-contents">
           #javascript #programming #coding #developer #programming #developer #logic #frontend #webdevelopment
         </div>
