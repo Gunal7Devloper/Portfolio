@@ -20,7 +20,7 @@ function copyToClipboard() {
     window.getSelection().addRange(range); // Select the content
     try {
         document.execCommand("copy"); // Copy to clipboard
-        alert("Content copied to clipboard!");
+        showToast();
     } catch (err) {
         console.error("Failed to copy: ", err);
     }
