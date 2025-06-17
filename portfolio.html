@@ -37,22 +37,32 @@
 
     <div class="d-flex gap-5">
       <div id="capture-template" class="post-template1">
-        <h4>Write a function to find the largest gap between two consecutive numbers.</h4>
+        <h4>Write a function to check if the input string has valid parentheses.</h4>
         <span class="dev_post_inst">
           <strong>Instructions</strong>
-          Return the largest gap between two consecutive numbers in the array <span
-            class="dev_post_highlight_pt">arr</span> .
-          For example, given <span class="dev_post_highlight_pt">[3, 5, 9, 10, 8]</span>,
-          the difference between consecutive numbers are 2 <span class="dev_post_highlight_pt">(3 - 5)</span>,
-          4 <span class="dev_post_highlight_pt">(5 - 9)</span> ,
-          1 <span class="dev_post_highlight_pt">(9 - 10)</span>
-          and 2 <span class="dev_post_highlight_pt">(10 - 8)</span>.
-          Here, the largest difference is 4.
+          A string has valid parentheses only when every opening bracket is closed in the correct order.
+          Examples of some string with valid parentheses are:
+          1. <span class="dev_post_highlight_pt">"()"</span> - each opening bracket <span
+            class="dev_post_highlight_pt">(</span> has a corresponding closing bracket <span
+            class="dev_post_highlight_pt">)</span>
+          <br />
+          2. <span class="dev_post_highlight_pt">"()[]"</span> - each opening bracket <span
+            class="dev_post_highlight_pt">(</span> and <span class="dev_post_highlight_pt">[</span> has a corresponding
+          closing bracket
+          <span class="dev_post_highlight_pt">)</span> and <span class="dev_post_highlight_pt">]</span>
+          <br />
+          3. <span class="dev_post_highlight_pt">"(([]){})"</span> - each type of bracket is correctly closed in order.
+          Examples of some string with invalid parentheses are:
+          1. <span class="dev_post_highlight_pt">")("</span> - the closing bracket <span class="dev_post_highlight_pt">)</span> appears before the opening bracket 
+          <span class="dev_post_highlight_pt">(</span>
+          2. <span class="dev_post_highlight_pt">"({[})]"</span> - brackets are closed in wrong order
+          If the string has valid parentheses, return <span class="dev_post_highlight_pt">true</span>. Otherwise, return 
+          <span class="dev_post_highlight_pt">false</span>.
         </span>
         <h6 class="m-0"><strong>Input:</strong></h6>
-        <span> arr[] = [1, 3, 8, 9] </span>
+        <span> s = "{[()]}" </span>
         <h6 class="m-0"><strong>Output:</strong></h6>
-        <span>5</span>
+        <span>true</span>
         <h6 class="m-0"><strong>Code:</strong></h6>
         <img src="images/posts/js/Capture.PNG" alt="Code" class="img-fluid">
         <div class="dev_logo_container">
