@@ -42,25 +42,27 @@
           <strong>Instructions</strong>
           A string has valid parentheses only when every opening bracket is closed in the correct order.
           Examples of some string with valid parentheses are:
-          1. <span class="dev_post_highlight_pt">"()"</span> - each opening bracket <span
+          <br/>
+          1. <span class="dev_post_highlight_pt">"( )"</span> - each opening bracket <span
             class="dev_post_highlight_pt">(</span> has a corresponding closing bracket <span
             class="dev_post_highlight_pt">)</span>
           <br />
-          2. <span class="dev_post_highlight_pt">"()[]"</span> - each opening bracket <span
+          2. <span class="dev_post_highlight_pt">"( )[ ]"</span> - each opening bracket <span
             class="dev_post_highlight_pt">(</span> and <span class="dev_post_highlight_pt">[</span> has a corresponding
           closing bracket
           <span class="dev_post_highlight_pt">)</span> and <span class="dev_post_highlight_pt">]</span>
           <br />
-          3. <span class="dev_post_highlight_pt">"(([]){})"</span> - each type of bracket is correctly closed in order.
+          3. <span class="dev_post_highlight_pt">"( ( [ ] ) { } )"</span> - each type of bracket is correctly closed in order.
+          <br/>
           Examples of some string with invalid parentheses are:
           1. <span class="dev_post_highlight_pt">")("</span> - the closing bracket <span class="dev_post_highlight_pt">)</span> appears before the opening bracket 
           <span class="dev_post_highlight_pt">(</span>
-          2. <span class="dev_post_highlight_pt">"({[})]"</span> - brackets are closed in wrong order
+          2. <span class="dev_post_highlight_pt">"( { [ } ) ]"</span> - brackets are closed in wrong order
           If the string has valid parentheses, return <span class="dev_post_highlight_pt">true</span>. Otherwise, return 
           <span class="dev_post_highlight_pt">false</span>.
         </span>
         <h6 class="m-0"><strong>Input:</strong></h6>
-        <span> s = "{[()]}" </span>
+        <span> s = "{ [ ( ) ] }" </span>
         <h6 class="m-0"><strong>Output:</strong></h6>
         <span>true</span>
         <h6 class="m-0"><strong>Code:</strong></h6>
