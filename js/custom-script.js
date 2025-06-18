@@ -34,8 +34,8 @@ function showToast() {
   function opentemplate(value) {
     let baseUrl = "https://gunal7devloper.github.io/Portfolio/";
     let urls = {
-        'J': `${baseUrl}/portfolio.html`,
-        'C': `${baseUrl}/css-template.html`,
+        'J': `${baseUrl}portfolio.html`,
+        'C': `${baseUrl}templates/css-template.html`,
     }
     window.location.href = urls[value];
   }
