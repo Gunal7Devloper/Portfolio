@@ -46,34 +46,80 @@
 
     <div class="d-flex gap-5">
       <div id="capture-template" class="post-template1">
-        <h4>Write a function to check if the input string has valid parentheses.</h4>
+
+
+Given an integer n, return the nth Recamán's term.
+
+------------------------------------------------------------------------------
+
+Handle base case
+
+If n < 1, return 0 immediately since a(0) = 0.
+
+Initialize the sequence
+
+Start with an array containing only the first value of the Recamán sequence, which is 0.
+
+Iterate from 1 to n
+
+For each index i from 1 to n, calculate the next term in the sequence.
+
+Get the previous term
+
+Retrieve the most recent value from the sequence (i.e., value at index i - 1).
+
+Try subtracting the index
+
+Subtract the current index i from the previous value to get a candidate value.
+
+Check if subtraction result is valid
+
+If the result is negative or already exists in the sequence, discard it.
+
+Fallback to addition
+
+If subtraction was invalid, compute the new value by adding the current index i to the previous value.
+
+Add the correct next value to the sequence
+
+Append the valid result (either the subtraction or addition result) to the sequence.
+
+Repeat until the nth value is computed
+
+Continue this process for all values up to the nth index.
+
+Return the nth value
+
+After the loop ends, return the value at index n of the sequence.
+
+------------------------------------------------------------------------
+
+        <h4>Write a function to find the nth term of Recamán's sequence.</h4>
         <span class="dev_post_inst">
           <strong>Instructions</strong>
-          A string has valid parentheses only when every opening bracket is closed in the correct order.
-          Examples of some string with valid parentheses are:
+          Recamán's sequence is defined as follows:
           <br />
-          1. <span class="dev_post_highlight_pt">"( )"</span> - each opening bracket <span
-            class="dev_post_highlight_pt">(</span> has a corresponding closing bracket <span
-            class="dev_post_highlight_pt">)</span>
+          1. <span class="dev_post_highlight_pt">a(0) = 0;</span> for <span class="dev_post_highlight_pt">n > 0</span>.
           <br />
-          2. <span class="dev_post_highlight_pt">"( )[ ]"</span> - each opening bracket <span
-            class="dev_post_highlight_pt">(</span> and <span class="dev_post_highlight_pt">[</span> has a corresponding
-          closing bracket
-          <span class="dev_post_highlight_pt">)</span> and <span class="dev_post_highlight_pt">]</span>
+          2. <span class="dev_post_highlight_pt">a(n) = a(n - 1) - n</span> if that number is positive and not already in the sequence.
           <br />
-          3. <span class="dev_post_highlight_pt">"( ( [ ] ) { } )"</span> - each type of bracket is correctly closed in
-          order.
+          3. Otherwise, <span class="dev_post_highlight_pt">a(n) = a(n - 1) + n</span>.
           <br />
-          Examples of some string with invalid parentheses are:
+          The first few terms of the sequence are:
           <br />
-          1. <span class="dev_post_highlight_pt">")("</span> - the closing bracket <span
-            class="dev_post_highlight_pt">)</span> appears before the opening bracket
-          <span class="dev_post_highlight_pt">(</span>
+          1. <span class="dev_post_highlight_pt">r(0) = 0</span>.
           <br />
-          2. <span class="dev_post_highlight_pt">"( { [ } ) ]"</span> - brackets are closed in wrong order.
+          2. <span class="dev_post_highlight_pt">r(1) = r(0) - 1</span> is not positive, so <span class="dev_post_highlight_pt">r(1) = r(0) + 1 = 1</span>.
           <br />
-          If the string has valid parentheses, return <span class="dev_post_highlight_pt">true</span>. Otherwise, return
-          <span class="dev_post_highlight_pt">false</span>.
+          3. <span class="dev_post_highlight_pt">r(2) = r(1) - 2 = -1</span> is not positive, so <span class="dev_post_highlight_pt">r(2) = r(1) + 2 = 3</span>.
+          <br />
+          4. <span class="dev_post_highlight_pt">r(3) = r(2) - 3 = 0</span> has been used, so <span class="dev_post_highlight_pt">r(3) = r(2) + 3 = 6</span>.
+          <br />
+          5. <span class="dev_post_highlight_pt">r(4) = r(3) - 4 = 2</span>.
+          <br />
+          6. <span class="dev_post_highlight_pt">r(5) = r(4) - 5 = -3</span> is not positive, so <span class="dev_post_highlight_pt">r(5) = r(4) + 5 = 7</span>.
+          <br />
+          So, Recamán's sequence is: 0, 1, 3, 6, 2, 7, ...
         </span>
         <h6 class="m-0"><strong>Input:</strong></h6>
         <span> s = "{ [ ( ) ] }" </span>
