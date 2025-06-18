@@ -31,3 +31,11 @@ function showToast() {
     const toast = new bootstrap.Toast(toastEl);
     toast.show();
   }
+  function opentemplate(value) {
+    let baseUrl = "https://gunal7devloper.github.io/Portfolio/";
+    let urls = {
+        'J': `${baseUrl}/portfolio.html`,
+        'C': `${baseUrl}/css-template.html`,
+    }
+    window.location.href = urls[value];
+  }
