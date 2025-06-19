@@ -35,7 +35,7 @@ function showToast() {
     let baseUrl = "https://gunal7devloper.github.io/Portfolio/";
     let urls = {
         'J': `${baseUrl}portfolio.html`,
-        'C': `${baseUrl}templates/css-template.html`,
+        'C': `${baseUrl}templates/backdrop/backdrop.html`,
     }
     window.location.href = urls[value];
   }
