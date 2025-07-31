@@ -403,9 +403,8 @@ a:focus {
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
   outline: 0;
-  padding: 8px 30px;
+  padding: 0px 10px;
   font-weight: bold;
-  border-radius: 20px;
 }
 
 .btn:last-child {
@@ -689,8 +688,8 @@ ul li {
   box-shadow: 0 0px 2px 0 rgba(255, 255, 255, 0.16), 0 0px 2px 0 rgba(255, 255, 255, 0.12);
   background-color: transparent;
   border-color: transparent;
-  height: 50px;
-  line-height: 50px;
+  height: 30px;
+  line-height: 30px;
 }
 
 .form-control:focus {
@@ -769,7 +768,7 @@ button:focus {
 }
 
 .form-control {
-  padding: 20px;
+  padding: 5px;
   -webkit-box-shadow: 0 0px 2px 0 rgba(255, 255, 255, 0.8), 0 0px 1px 1px rgba(255, 255, 255, 0.8);
   box-shadow: 0 0px 2px 0 rgba(255, 255, 255, 0.8), 0 0px 1px 1px rgba(255, 255, 255, 0.8);
 }
