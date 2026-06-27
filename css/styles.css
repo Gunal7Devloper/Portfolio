@@ -1468,12 +1468,14 @@ li .fa {
 }
 
 .mh-header .navbar-nav li a {
-  border-bottom: 1px solid transparent;
+  border-bottom: none !important;
   font-weight: bold;
   font-family: "roboto", sans-serif;
   font-size: 18px;
   opacity: 1;
   line-height: 30px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .mh-header .navbar-nav li a.nav-link {
@@ -1481,8 +1483,30 @@ li .fa {
   padding-right: 0;
 }
 
-.mh-header .navbar-nav li a:hover {
-  color: #0bceaf;
+/* Modern Animated Underline */
+.mh-header .navbar-nav li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #0bceaf;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.mh-header .navbar-nav li a:hover,
+.mh-header .navbar-nav li.active a,
+.mh-header .navbar-nav li a.active {
+  color: #0bceaf !important;
+}
+
+.mh-header .navbar-nav li a:hover::after,
+.mh-header .navbar-nav li.active a::after,
+.mh-header .navbar-nav li a.active::after {
+  width: 100%;
 }
 
 .nav-3 .navbar-dark .navbar-nav .nav-link a {
