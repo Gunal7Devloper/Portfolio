@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="#experience">Experiences</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-                <a href="#" class="btn btn-dark-navy"><i class="fa fa-download me-2"></i>Download Resume</a>
+                <a href="#" onclick="downloadCV(); return false;" class="btn btn-dark-navy"><i class="fa fa-download me-2"></i>Download Resume</a>
             </div>
         </div>
     </nav>
@@ -368,7 +368,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="social-links">
-                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.linkedin.com/in/gunalan7/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                             <a href="#"><i class="fa-brands fa-github"></i></a>
                             <a href="#"><i class="fa-brands fa-dribbble"></i></a>
                         </div>
@@ -408,6 +408,38 @@
             window.addEventListener('scroll', updateActiveMenu);
             updateActiveMenu();
         });
+    </script>
+    
+    <!-- Resume Download Script -->
+    <script>
+        function downloadCV() {
+            fetch('docs/Resume.pdf')
+                .then(response => {
+                    if (!response.ok) throw new Error('Network error');
+                    return response.blob();
+                })
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = 'Gunalan_Resume.pdf';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                })
+                .catch(() => {
+                    // Fallback for file:// protocol where fetch is blocked by CORS
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = 'docs/Resume.pdf';
+                    a.download = 'Gunalan_Resume.pdf';
+                    a.target = '_blank';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                });
+        }
     </script>
 </body>
 </html>
