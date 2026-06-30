@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
     <title>Gunalan - Frontend Developer</title>
@@ -24,7 +24,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav mx-auto position-relative">
+                    <li class="nav-indicator"></li>
                     <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
@@ -48,19 +49,19 @@
                     <div class="hero-badges">
                         <div class="badge-pill"><i class="fa fa-map-marker-alt"></i> Chennai, India</div>
                         <div class="badge-pill"><i class="fa fa-briefcase"></i> 7+ Years Exp.</div>
-                        <div class="badge-pill"><i class="fa fa-envelope"></i> gunalan.dev@gmail.com</div>
+                        <div class="badge-pill"><i class="fa fa-envelope"></i> gunalanit7@gmail.com</div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image-wrapper">
                         <div class="hero-blob"></div>
                         <!-- Place holder for hero image -->
-                        <img src="assets/images/hero.png" alt="Gunalan" class="hero-img" style="max-height: 400px; border-radius: 0 0 200px 200px; object-fit: cover; width: 350px;" onerror="this.src='https://via.placeholder.com/350x400/0bceaf/ffffff?text=Gunalan'">
+                        <img src="assets/images/hero.png" alt="Gunalan" class="hero-img" style="max-height: 400px; border-radius: 0 0 200px 200px; object-fit: cover; width: 350px;" onerror="this.onerror=null; this.src='https://via.placeholder.com/350x400/00a4b4/ffffff?text=Gunalan'">
                         <div class="floating-badge d-none d-md-flex">
                             <div class="fb-icon" style="background-color: #dd0031;">A</div>
                             <div class="fb-text">
                                 <span class="fb-title">Angular Expert</span>
-                                <span class="fb-sub" style="color: #0bceaf;">12 - 22</span>
+                                <span class="fb-sub" style="color: #00a4b4;">12 - 22</span>
                             </div>
                         </div>
                     </div>
@@ -72,7 +73,7 @@
                 <div class="row text-center text-lg-start">
                     <div class="col-6 col-lg pt-3 pt-lg-0">
                         <div class="stat-item justify-content-center justify-content-lg-start">
-                            <div class="stat-icon" style="background-color: #0bceaf;"><i class="fa fa-briefcase"></i></div>
+                            <div class="stat-icon" style="background-color: #00a4b4;"><i class="fa fa-briefcase"></i></div>
                             <div class="stat-info">
                                 <h3>7+</h3>
                                 <p>Years Experience</p>
@@ -131,13 +132,13 @@
                 <div class="col-md-4">
                     <div class="service-card">
                         <div class="service-header">
-                            <div class="service-icon" style="background-color: #0bceaf;">
+                            <div class="service-icon" style="background-color: #00a4b4;">
                                 <i class="fa-brands fa-angular"></i>
                             </div>
                             <h3>Angular Development</h3>
                         </div>
                         <ul class="service-list">
-                            <li>Angular 12 – 22</li>
+                            <li>Angular 12 Ã¢â‚¬â€œ 22</li>
                             <li>Signals & Standalone Components</li>
                             <li>RxJS & State Management</li>
                             <li>Kendo UI / PrimeNG</li>
@@ -217,7 +218,7 @@
                             <div class="tech-skill-tag"><i class="fa-solid fa-database" style="color: #336791;"></i> PostgreSQL</div>
                             <div class="tech-skill-tag"><i class="fa-brands fa-docker" style="color: #2496ed;"></i> Docker</div>
                             <div class="tech-skill-tag"><i class="fa-brands fa-jenkins" style="color: #d33833;"></i> Jenkins</div>
-                            <div class="tech-skill-tag"><i class="fa-solid fa-bolt" style="color: #0bceaf;"></i> FastAPI</div>
+                            <div class="tech-skill-tag"><i class="fa-solid fa-bolt" style="color: #00a4b4;"></i> FastAPI</div>
                             <div class="tech-skill-tag"><i class="fa-solid fa-brain" style="color: #48bb78;"></i> AI APIs</div>
                         </div>
                     </div>
@@ -355,20 +356,20 @@
                     <div class="col-lg-5 mb-4 mb-lg-0">
                         <h2>Let's build something amazing together!</h2>
                         <p>I'm currently open to new opportunities.</p>
-                        <a href="mailto:gunalan.dev@gmail.com" class="btn-primary-glow">
+                        <a href="mailto:gunalanit7@gmail.com" class="btn-primary-glow">
                             Contact Me <i class="fa fa-paper-plane"></i>
                         </a>
                     </div>
                     <div class="col-lg-4 mb-4 mb-lg-0">
                         <ul class="contact-info-list">
-                            <li><i class="fa fa-envelope"></i> gunalan.dev@gmail.com</li>
+                            <li><i class="fa fa-envelope"></i> gunalanit7@gmail.com</li>
                             <li><i class="fa fa-phone"></i> +91 9751132561</li>
                             <li><i class="fa fa-map-marker-alt"></i> Chennai, India</li>
                         </ul>
                     </div>
                     <div class="col-lg-3">
                         <div class="social-links">
-                            <a href="https://www.linkedin.com/in/gunalan7/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.linkedin.com/in/gunalan7" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                             <a href="#"><i class="fa-brands fa-github"></i></a>
                             <a href="#"><i class="fa-brands fa-dribbble"></i></a>
                         </div>
@@ -386,8 +387,12 @@
         document.addEventListener("DOMContentLoaded", function() {
             const navLinks = document.querySelectorAll('.navbar-nav .nav-item .nav-link');
             const sections = document.querySelectorAll('section[id], footer[id]');
+            let isClickScrolling = false;
+            let scrollTimeout = null;
             
             function updateActiveMenu() {
+                if (isClickScrolling) return; // Skip updating during click-initiated scroll
+
                 let current = '';
                 
                 sections.forEach(section => {
@@ -403,7 +408,41 @@
                         link.classList.add('active');
                     }
                 });
+                updateIndicator();
             }
+
+            function updateIndicator() {
+                const indicator = document.querySelector('.nav-indicator');
+                const activeLink = document.querySelector('.navbar-nav .nav-link.active');
+                if (indicator && activeLink) {
+                    indicator.style.width = `${activeLink.offsetWidth}px`;
+                    indicator.style.left = `${activeLink.offsetLeft}px`;
+                }
+            }
+            
+            // Add click listener for smooth scrolling and immediate indicator update
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    isClickScrolling = true;
+                    // Update active class immediately for faster response
+                    navLinks.forEach(n => n.classList.remove('active'));
+                    this.classList.add('active');
+                    updateIndicator();
+                    
+                    // Clear any existing timeout
+                    if (scrollTimeout) {
+                        clearTimeout(scrollTimeout);
+                    }
+                    
+                    // Re-enable scroll listener after smooth scroll completes (approx 800ms)
+                    scrollTimeout = setTimeout(() => {
+                        isClickScrolling = false;
+                    }, 800);
+                });
+            });
+
+            // Handle window resize to adjust indicator position
+            window.addEventListener('resize', updateIndicator);
 
             window.addEventListener('scroll', updateActiveMenu);
             updateActiveMenu();
@@ -443,3 +482,4 @@
     </script>
 </body>
 </html>
+
